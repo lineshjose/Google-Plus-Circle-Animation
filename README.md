@@ -1,4 +1,4 @@
-Google-Circle-Animation
+Google Plus Circle Animation
 =======================
 
 Google Plus Circle animation with Jquery and CSS3
