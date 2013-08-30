@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0041)http://demos.9lessons.info/circleani.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Linesh Jose http://www.lineshjose.com/" />
+        <title>Circle Animation</title>
+        
+        <script type="text/javascript" src="./jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+			
+			$(function() {
+				$('.outer_circle').mouseover(function() {
+					$('.outer_circle').addClass('outer_circle_open');
+					$('.inner_circle').animate({left:'47px',top:'76px'},0);
+				});
+				$('.outer_circle').mouseout(function() {
+					$('.outer_circle').removeClass('outer_circle_open');
+					$('.inner_circle').animate({left:'18px',top:'47px'},0);
+				});
+			});
+						
+            $('.circle_del').click(function(){
+					$('.circle_del').remove();
+                    $('.outer_circle').addClass('outer_circle_open').animate({height: '183px', width: '183px'},100);
+					$('.inner_circle').animate({left:'47',top:'76'},0)
+					$('.circle_label').addClass('rotate_label');
+               		$('.outer_circle').animate({"top":"150px"},300).animate({"bottom":"20px"}, 100, function(){ });
+					$('.outer_circle').animate({"opacity":"0","margin-left":"600px"}, 800, 'linear');});
+            });
+         </script>
+ 
+        <style type="text/css">
+          body{ text-align: center;margin:0; padding:0; color:#000; font-family: "Times, serif", "Helvetica" , "Arial";font-size:12px;background: #FFF; }
+          h1{padding:30px;color:#000;border-bottom:2px solid #ccc;} 
+		   
+		 #circle{	position: relative;vertical-align: top;position: relative;display: -moz-inline-box;	display: inline-block;line-height: normal;text-align:center}
+				
+		.outer_circle
+			{
+				background: url('./circle_closed.png')no-repeat left top;
+				height: 125px;width: 125px;	margin: 31px;position: relative;vertical-align: top;z-index: 5;
+				-webkit-border-radius: 63px;-moz-border-radius: 63px;border-radius: 63px;cursor: pointer;
+			}
+		.outer_circle_open
+			{
+				background:url('./circle_open.png') no-repeat left top !important;
+				height: 183px;width: 183px;	
+				margin: 2px;z-index: 2;	-webkit-border-radius: 92px;-moz-border-radius: 92px;border-radius: 92px;
+			}
+
+            .inner_circle{
+				display: block;	color: white;	cursor: pointer;font-size: 13px;	position: relative;	cursor: pointer;	text-align: center;
+				vertical-align: center;	width: 88px;left: 18px;	top: 47px;line-height: normal;
+            }
+			
+            .circle_label
+            {
+				font:Arial, Helvetica, sans-serif;color: white;cursor: pointer;font-size: 13px;cursor: pointer;text-align: center
+           }
+           
+		   
+		    .rotate_label {
+                -webkit-animation-name: rotateThis;
+                -webkit-animation-duration:2s;
+                -webkit-animation-iteration-count:infinite;
+                -webkit-animation-timing-function:linear;
+            }
+            @-webkit-keyframes rotateThis {
+                from {-webkit-transform:scale(1) rotate(0deg);}
+            to {-webkit-transform:scale(1) rotate(360deg);}
+            }
+           
+        </style>
+    </head>
+    <body>
+	<h1>Google Plus Circle rotation animation with Jquery and CSS3 by LineshJose.Com</h1>
+	<div style="text-align:left;margin:0 50px ;"> Click the delete link to see the effect. <a href="http://lineshjose.com/blog/how-to-create-google-plus-circle-animation-with-jquery-and-css3/" target="parent" ><b>Download this Script</b></a> </div>
+	<br />
+	 <div id="circle">
+	 <div class="circle_del"><a href="#">Delete This Circle</a></div>
+	 <br />
+         <div class="outer_circle">
+            <div class="inner_circle">
+                <div class="circle_label">Friend Circle </div>
+             </div>
+           </div>
+		   			
+     </div>
+			
+
+   
+
+</body></html>
