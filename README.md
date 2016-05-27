@@ -9,8 +9,6 @@ Author: Linesh Jose
 
 Url: http://linesh.com
 
-Email: lineshjose@gmail.com
-
 Donate:  http://linesh.com/make-a-donation/
 
 github: https://github.com/lineshjose
